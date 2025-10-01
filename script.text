@@ -1,0 +1,549 @@
+// ============================================
+// FILE: src/App.jsx
+// ============================================
+import React, { useState } from 'react';
+import Navigation from './components/layout/Navigation';
+import Footer from './components/layout/Footer';
+import Hero from './components/sections/Hero';
+import MissionStatement from './components/sections/MissionStatement';
+import Communities from './components/sections/Communities';
+import Testimonial from './components/sections/Testimonial';
+import AboutSection from './components/sections/AboutSection';
+import SupportSection from './components/sections/SupportSection';
+import NewsSection from './components/sections/NewsSection';
+import FAQSection from './components/sections/FAQSection';
+import { Home, Users, Heart, Mail, FileText, HelpCircle } from 'lucide-react';
+
+const App = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '#home', icon: Home },
+    { name: 'Our Communities', href: '#communities', icon: Users },
+    { name: 'About Us', href: '#about', icon: FileText },
+    { name: 'Support Us', href: '#support', icon: Heart },
+    { name: 'News', href: '#news', icon: Mail },
+    { name: 'FAQ', href: '#faq', icon: HelpCircle },
+  ];
+
+  return (
+    <div className="min-h-screen bg-amber-50">
+      <Navigation 
+        items={navigation} 
+        mobileMenuOpen={mobileMenuOpen} 
+        setMobileMenuOpen={setMobileMenuOpen} 
+      />
+      
+      <Hero />
+      <MissionStatement />
+      <Communities />
+      
+      <Testimonial 
+        quote="I love where I live because I have all my independence"
+        attribution="Independent But Not Alone"
+      />
+      
+      <AboutSection />
+      <SupportSection />
+      <NewsSection />
+      <FAQSection />
+      <Footer navigation={navigation} />
+    </div>
+  );
+};
+
+export default App;
+
+// ============================================
+// FILE: src/components/layout/Navigation.jsx
+// ============================================
+import React from 'react';
+import { Menu, X } from 'lucide-react';
+import Logo from '../common/Logo';
+import NavLink from '../common/NavLink';
+import MobileMenu from './MobileMenu';
+
+const Navigation = ({ items, mobileMenuOpen, setMobileMenuOpen }) => {
+  return (
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Logo />
+          
+          <div className="hidden md:flex space-x-8">
+            {items.map((item) => (
+              <NavLink key={item.name} {...item} />
+            ))}
+          </div>
+
+          <button
+            className="md:hidden text-teal-700"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <MobileMenu items={items} onClose={() => setMobileMenuOpen(false)} />
+        )}
+      </nav>
+    </header>
+  );
+};
+
+export default Navigation;
+
+// ============================================
+// FILE: src/components/layout/MobileMenu.jsx
+// ============================================
+import React from 'react';
+
+const MobileMenu = ({ items, onClose }) => (
+  <div className="md:hidden pb-4">
+    {items.map((item) => (
+      <a
+        key={item.name}
+        href={item.href}
+        className="block py-2 text-teal-700 hover:text-teal-900 font-medium"
+        onClick={onClose}
+      >
+        {item.name}
+      </a>
+    ))}
+  </div>
+);
+
+export default MobileMenu;
+
+// ============================================
+// FILE: src/components/layout/Footer.jsx
+// ============================================
+import React from 'react';
+import FooterColumn from './FooterColumn';
+
+const Footer = ({ navigation }) => (
+  <footer className="bg-teal-900 text-white py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <FooterColumn title="Living Years">
+          <p className="text-teal-200">
+            Creating communities that foster independence for adults with developmental disabilities.
+          </p>
+        </FooterColumn>
+        
+        <FooterColumn title="Quick Links">
+          <ul className="space-y-2">
+            {navigation.map((item) => (
+              <li key={item.name}>
+                <a href={item.href} className="text-teal-200 hover:text-white">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </FooterColumn>
+        
+        <FooterColumn title="Contact">
+          <p className="text-teal-200">
+            Email: info@livingyears.org<br />
+            Phone: (555) 123-4567
+          </p>
+        </FooterColumn>
+      </div>
+      
+      <div className="border-t border-teal-800 pt-8 text-center text-teal-200">
+        <p>&copy; 2025 Living Years. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+);
+
+export default Footer;
+
+// ============================================
+// FILE: src/components/layout/FooterColumn.jsx
+// ============================================
+import React from 'react';
+
+const FooterColumn = ({ title, children }) => (
+  <div>
+    <h3 className="text-xl font-bold mb-4">{title}</h3>
+    {children}
+  </div>
+);
+
+export default FooterColumn;
+
+// ============================================
+// FILE: src/components/layout/Section.jsx
+// ============================================
+import React from 'react';
+
+const Section = ({ id, className = "", children }) => (
+  <section id={id} className={`py-16 ${className}`}>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {children}
+    </div>
+  </section>
+);
+
+export default Section;
+
+// ============================================
+// FILE: src/components/common/Logo.jsx
+// ============================================
+import React from 'react';
+
+const Logo = () => (
+  <div className="flex items-center">
+    <img 
+      src="/logo.png" 
+      alt="Living Years Logo" 
+      className="h-16 w-auto"
+      onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.nextSibling.style.display = 'block';
+      }}
+    />
+    <div style={{display: 'none'}} className="flex items-center gap-2">
+      <div className="text-3xl font-bold text-teal-700">LIVING YEARS</div>
+    </div>
+  </div>
+);
+
+export default Logo;
+
+// ============================================
+// FILE: src/components/common/NavLink.jsx
+// ============================================
+import React from 'react';
+
+const NavLink = ({ name, href }) => (
+  <a
+    href={href}
+    className="text-teal-700 hover:text-teal-900 font-medium transition-colors"
+  >
+    {name}
+  </a>
+);
+
+export default NavLink;
+
+// ============================================
+// FILE: src/components/common/Button.jsx
+// ============================================
+import React from 'react';
+
+const Button = ({ children, href, variant = 'primary', onClick }) => {
+  const baseStyles = "inline-block px-8 py-3 rounded-lg font-semibold transition-colors";
+  const variants = {
+    primary: "bg-white text-teal-700 hover:bg-teal-50",
+    secondary: "bg-teal-700 text-white hover:bg-teal-800",
+    outline: "bg-white text-teal-700 border-2 border-teal-700 hover:bg-teal-50"
+  };
+
+  const className = `${baseStyles} ${variants[variant]}`;
+
+  if (href) {
+    return <a href={href} className={className}>{children}</a>;
+  }
+
+  return <button onClick={onClick} className={className}>{children}</button>;
+};
+
+export default Button;
+
+// ============================================
+// FILE: src/components/common/SectionTitle.jsx
+// ============================================
+import React from 'react';
+
+const SectionTitle = ({ children, centered = true }) => (
+  <h2 className={`text-3xl font-bold text-teal-800 mb-12 ${centered ? 'text-center' : ''}`}>
+    {children}
+  </h2>
+);
+
+export default SectionTitle;
+
+// ============================================
+// FILE: src/components/sections/Hero.jsx
+// ============================================
+import React from 'react';
+import Button from '../common/Button';
+
+const Hero = () => (
+  <section id="home" className="bg-gradient-to-br from-teal-600 to-teal-800 text-white py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+        Apartment Communities That Foster Independence
+      </h1>
+      <p className="text-xl md:text-2xl mb-8 text-teal-100">
+        For adults with developmental disabilities
+      </p>
+      <Button href="#communities" variant="primary">
+        Our Communities
+      </Button>
+    </div>
+  </section>
+);
+
+export default Hero;
+
+// ============================================
+// FILE: src/components/sections/MissionStatement.jsx
+// ============================================
+import React from 'react';
+import Section from '../layout/Section';
+import SectionTitle from '../common/SectionTitle';
+
+const MissionStatement = () => (
+  <Section className="bg-white">
+    <div className="max-w-4xl mx-auto text-center">
+      <SectionTitle>Our Mission</SectionTitle>
+      <p className="text-lg text-gray-700 leading-relaxed">
+        Living Years is working to fill the gap in consumer-controlled, affordable, safe, and 
+        community-centered apartment living for adults with developmental disabilities. We provide 
+        the individuals we serve with an atmosphere of hope, housing security and a sense of belonging.
+      </p>
+    </div>
+  </Section>
+);
+
+export default MissionStatement;
+
+// ============================================
+// FILE: src/components/sections/Communities.jsx
+// ============================================
+import React from 'react';
+import Section from '../layout/Section';
+import SectionTitle from '../common/SectionTitle';
+import CommunityCard from '../cards/CommunityCard';
+
+const Communities = () => (
+  <Section id="communities" className="bg-amber-50">
+    <SectionTitle>Our Communities</SectionTitle>
+    <div className="grid md:grid-cols-3 gap-8">
+      {[1, 2, 3].map((i) => (
+        <CommunityCard key={i} number={i} />
+      ))}
+    </div>
+  </Section>
+);
+
+export default Communities;
+
+// ============================================
+// FILE: src/components/sections/Testimonial.jsx
+// ============================================
+import React from 'react';
+
+const Testimonial = ({ quote, attribution }) => (
+  <section className="py-16 bg-teal-700 text-white">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <blockquote className="text-2xl md:text-3xl font-medium italic mb-4">
+        "{quote}"
+      </blockquote>
+      <p className="text-teal-200 text-lg">{attribution}</p>
+    </div>
+  </section>
+);
+
+export default Testimonial;
+
+// ============================================
+// FILE: src/components/sections/AboutSection.jsx
+// ============================================
+import React from 'react';
+import Section from '../layout/Section';
+import SectionTitle from '../common/SectionTitle';
+import InfoCard from '../cards/InfoCard';
+
+const AboutSection = () => (
+  <Section id="about" className="bg-white">
+    <SectionTitle>About Us</SectionTitle>
+    <div className="grid md:grid-cols-2 gap-12">
+      <InfoCard 
+        title="Our Story"
+        content={
+          <>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Living Years creates communities for adults with developmental disabilities that fulfill 
+              their need for independence while ensuring their safety.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              We believe that everyone deserves a place to call home where they can thrive, grow, 
+              and be part of a supportive community.
+            </p>
+          </>
+        }
+      />
+      <InfoCard 
+        title="Our Team"
+        content="The Living Years team is a dedicated group of professionals committed to creating and 
+        maintaining a sense of belonging and community for all who live in a Living Years apartment."
+      />
+    </div>
+  </Section>
+);
+
+export default AboutSection;
+
+// ============================================
+// FILE: src/components/sections/SupportSection.jsx
+// ============================================
+import React from 'react';
+import Section from '../layout/Section';
+import SectionTitle from '../common/SectionTitle';
+import Button from '../common/Button';
+
+const SupportSection = () => (
+  <Section id="support" className="bg-amber-50">
+    <div className="max-w-4xl mx-auto text-center">
+      <SectionTitle>Support Us</SectionTitle>
+      <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        If you have a desire to share your talents with adults with developmental disabilities, 
+        then Living Years would like to meet you. We have volunteer opportunities that fit with most schedules.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="secondary">Volunteer</Button>
+        <Button variant="outline">Donate</Button>
+      </div>
+    </div>
+  </Section>
+);
+
+export default SupportSection;
+
+// ============================================
+// FILE: src/components/sections/NewsSection.jsx
+// ============================================
+import React from 'react';
+import Section from '../layout/Section';
+import SectionTitle from '../common/SectionTitle';
+import NewsItem from '../cards/NewsItem';
+
+const NewsSection = () => (
+  <Section id="news" className="bg-white">
+    <SectionTitle>News & Updates</SectionTitle>
+    <div className="space-y-6">
+      {[1, 2, 3].map((i) => (
+        <NewsItem key={i} number={i} />
+      ))}
+    </div>
+  </Section>
+);
+
+export default NewsSection;
+
+// ============================================
+// FILE: src/components/sections/FAQSection.jsx
+// ============================================
+import React from 'react';
+import Section from '../layout/Section';
+import SectionTitle from '../common/SectionTitle';
+import FAQItem from '../cards/FAQItem';
+
+const FAQSection = () => {
+  const faqs = [
+    {
+      q: "Who can live in a Living Years community?",
+      a: "Our communities are designed for adults with developmental disabilities who seek independent living in a supportive environment."
+    },
+    {
+      q: "What makes Living Years different?",
+      a: "We provide consumer-controlled, affordable, safe, and community-centered apartment living that fosters independence while ensuring residents are never alone."
+    },
+    {
+      q: "How can I apply?",
+      a: "Contact us directly to learn about availability and the application process for our communities."
+    }
+  ];
+
+  return (
+    <Section id="faq" className="bg-amber-50">
+      <div className="max-w-4xl mx-auto">
+        <SectionTitle>Frequently Asked Questions</SectionTitle>
+        <div className="space-y-6">
+          {faqs.map((item, i) => (
+            <FAQItem key={i} question={item.q} answer={item.a} />
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+};
+
+export default FAQSection;
+
+// ============================================
+// FILE: src/components/cards/CommunityCard.jsx
+// ============================================
+import React from 'react';
+
+const CommunityCard = ({ number }) => (
+  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+    <div className="h-48 bg-gradient-to-br from-teal-400 to-teal-600"></div>
+    <div className="p-6">
+      <h3 className="text-xl font-bold text-teal-800 mb-2">Community {number}</h3>
+      <p className="text-gray-600 mb-4">
+        Safe, affordable, and community-centered apartment living where residents can live independently, but not alone.
+      </p>
+      <button className="text-teal-700 font-semibold hover:text-teal-900">
+        Learn More →
+      </button>
+    </div>
+  </div>
+);
+
+export default CommunityCard;
+
+// ============================================
+// FILE: src/components/cards/NewsItem.jsx
+// ============================================
+import React from 'react';
+
+const NewsItem = ({ number }) => (
+  <div className="border-l-4 border-teal-700 pl-6 py-4">
+    <h3 className="text-xl font-bold text-teal-800 mb-2">Latest Update {number}</h3>
+    <p className="text-gray-600 mb-2">
+      Keep up with Living Years news and community updates here.
+    </p>
+    <span className="text-sm text-gray-500">Posted on September 2025</span>
+  </div>
+);
+
+export default NewsItem;
+
+// ============================================
+// FILE: src/components/cards/FAQItem.jsx
+// ============================================
+import React from 'react';
+
+const FAQItem = ({ question, answer }) => (
+  <div className="bg-white p-6 rounded-lg shadow-sm">
+    <h3 className="text-lg font-bold text-teal-800 mb-2">{question}</h3>
+    <p className="text-gray-700">{answer}</p>
+  </div>
+);
+
+export default FAQItem;
+
+// ============================================
+// FILE: src/components/cards/InfoCard.jsx
+// ============================================
+import React from 'react';
+
+const InfoCard = ({ title, content }) => (
+  <div>
+    <h3 className="text-2xl font-bold text-teal-700 mb-4">{title}</h3>
+    {typeof content === 'string' ? (
+      <p className="text-gray-700 leading-relaxed">{content}</p>
+    ) : (
+      content
+    )}
+  </div>
+);
+
+export default InfoCard;
