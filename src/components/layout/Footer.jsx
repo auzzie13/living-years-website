@@ -1,5 +1,5 @@
 // ============================================
-// FILE: src/components/layout/Footer.jsx
+// FILE: src/components/layout/Footer.jsx 
 // ============================================
 import React from 'react';
 import FooterColumn from './FooterColumn';

@@ -12,7 +12,7 @@ const MissionStatement = () => (
       <p className="text-lg text-gray-700 leading-relaxed">
         Living Years is working to fill the gap in consumer-controlled, affordable, safe, and 
         community-centered apartment living for adults with developmental disabilities. We provide 
-        the individuals we serve with an atmosphere of hope, housing security and a sense of belonging.
+        the individuals we serve with an atmosphere of hope, apartment security and a sense of belonging.
       </p>
     </div>
   </Section>
