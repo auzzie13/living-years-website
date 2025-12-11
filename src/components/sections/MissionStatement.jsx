@@ -6,7 +6,7 @@ import Section from '../layout/Section';
 import SectionTitle from '../common/SectionTitle';
 
 const MissionStatement = () => (
-  <Section className="bg-living-gold">
+  <Section className="bg-white">
     <div className="max-w-4xl mx-auto text-center">
       <SectionTitle>Our Mission</SectionTitle>
       <p className="text-lg text-gray-700 leading-relaxed">

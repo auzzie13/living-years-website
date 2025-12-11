@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         'living-blue': '#24617f',
         'living-cream': '#fffdeb',
-        'living-gold': '#d7b97c',
+        'living-gold': '#d3be93',
       },
     },
   },
