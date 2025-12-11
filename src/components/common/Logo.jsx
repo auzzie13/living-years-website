@@ -15,7 +15,7 @@ const Logo = () => (
       }}
     />
     <div style={{display: 'none'}} className="flex items-center gap-2">
-      <div className="text-3xl font-bold text-teal-700">LIVING YEARS</div>
+      <div className="text-3xl font-bold text-living-blue">LIVING YEARS</div>
     </div>
   </div>
 );

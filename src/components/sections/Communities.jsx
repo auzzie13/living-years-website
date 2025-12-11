@@ -7,7 +7,7 @@ import SectionTitle from '../common/SectionTitle';
 import CommunityCard from '../cards/CommunityCard';
 
 const Communities = () => (
-  <Section id="communities" className="bg-amber-50">
+  <Section id="communities" className="bg-living-cream">
     <SectionTitle>Our Communities</SectionTitle>
     <div className="grid md:grid-cols-3 gap-8">
       {[1, 2, 3].map((i) => (

@@ -9,7 +9,7 @@ import MobileMenu from './MobileMenu';
 
 const Navigation = ({ items, mobileMenuOpen, setMobileMenuOpen }) => {
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-living-cream shadow-sm sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Logo />
@@ -21,7 +21,7 @@ const Navigation = ({ items, mobileMenuOpen, setMobileMenuOpen }) => {
           </div>
 
           <button
-            className="md:hidden text-teal-700"
+            className="md:hidden text-living-blue"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

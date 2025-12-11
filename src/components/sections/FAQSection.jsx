@@ -23,7 +23,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <Section id="faq" className="bg-amber-50">
+    <Section id="faq" className="bg-living-cream">
       <div className="max-w-4xl mx-auto">
         <SectionTitle>Frequently Asked Questions</SectionTitle>
         <div className="space-y-6">

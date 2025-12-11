@@ -7,7 +7,7 @@ import SectionTitle from '../common/SectionTitle';
 import Button from '../common/Button';
 
 const SupportSection = () => (
-  <Section id="support" className="bg-amber-50">
+  <Section id="support" className="bg-living-cream">
     <div className="max-w-4xl mx-auto text-center">
       <SectionTitle>Support Us</SectionTitle>
       <p className="text-lg text-gray-700 mb-8 leading-relaxed">

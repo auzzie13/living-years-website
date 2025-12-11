@@ -27,7 +27,7 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen bg-living-cream">
       <Navigation 
         items={navigation} 
         mobileMenuOpen={mobileMenuOpen} 
