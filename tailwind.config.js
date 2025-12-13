@@ -9,6 +9,7 @@ module.exports = {
         'living-blue': '#24617f',
         'living-cream': '#fffdeb',
         'living-gold': '#d3be93',
+        'living-white': '#fffef8',
       },
     },
   },

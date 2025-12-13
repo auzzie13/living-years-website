@@ -5,11 +5,11 @@ import React from 'react';
 import FooterColumn from './FooterColumn';
 
 const Footer = ({ navigation }) => (
-  <footer className="bg-living-blue text-white py-12">
+  <footer className="bg-living-blue text-living-white py-12">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-3 gap-8 mb-8">
         <FooterColumn title="Living Years">
-          <p className="text-blue-100">
+          <p className="text-living-white">
             Creating communities that foster independence for adults with developmental disabilities.
           </p>
         </FooterColumn>

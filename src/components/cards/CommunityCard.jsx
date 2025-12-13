@@ -4,7 +4,7 @@
 import React from 'react';
 
 const CommunityCard = ({ number }) => (
-  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+  <div className="bg-living-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
     <div className="h-48 bg-gradient-to-br from-living-blue to-[#1a4d62]"></div>
     <div className="p-6">
       <h3 className="text-xl font-bold text-living-blue mb-2">Community {number}</h3>

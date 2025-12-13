@@ -7,7 +7,7 @@ import SectionTitle from '../common/SectionTitle';
 import NewsItem from '../cards/NewsItem';
 
 const NewsSection = () => (
-  <Section id="news" className="bg-white">
+  <Section id="news" className="bg-living-white">
     <SectionTitle>News & Updates</SectionTitle>
     <div className="space-y-6">
       {[1, 2, 3].map((i) => (

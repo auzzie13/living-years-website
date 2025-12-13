@@ -1,5 +1,5 @@
 // ============================================
-// FILE: src/App.jsx
+// FILE: src/App.jsx 
 // ============================================
 import React, { useState } from 'react';
 import Navigation from './components/layout/Navigation';
@@ -12,6 +12,7 @@ import AboutSection from './components/sections/AboutSection';
 import SupportSection from './components/sections/SupportSection';
 import NewsSection from './components/sections/NewsSection';
 import FAQSection from './components/sections/FAQSection';
+import FloatingMascot from './components/common/FloatingMascot';
 import { Home, Users, Heart, Mail, FileText, HelpCircle } from 'lucide-react';
 
 const App = () => {
@@ -33,6 +34,8 @@ const App = () => {
         mobileMenuOpen={mobileMenuOpen} 
         setMobileMenuOpen={setMobileMenuOpen} 
       />
+      
+      <FloatingMascot />
       
       <Hero />
       <MissionStatement />
