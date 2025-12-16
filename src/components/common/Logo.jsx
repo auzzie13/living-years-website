@@ -6,9 +6,9 @@ import React from 'react';
 const Logo = () => (
   <div className="flex items-center">
     <img 
-      src="/logo.png" 
+      src="/logo_nav.png" 
       alt="Living Years Logo" 
-      className="h-16 w-auto"
+      className="h-32 w-auto"
       onError={(e) => {
         e.target.style.display = 'none';
         e.target.nextSibling.style.display = 'block';
