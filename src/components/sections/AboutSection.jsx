@@ -22,9 +22,9 @@ const AboutSection = () => {
     },
     {
       name: "Daniel Pollard",
-      title: "XXXX",
+      title: "Secretary",
       image: "/images/Daniel_Pollard-2.png",
-      bio: "Daniel Pollard. Born and raised in Columbia, Tn. I currently reside in Spring Hill with my wife Jeanne Pollard who is a middle school teacher in Williamson county. We have five children; Daniel – 27, Katie – 25, Hannah – 24, Alex – 21 and Charlotte – 16. Katie is our special needs daughter that was born with a rare genetic disorder, diploid triploid mosaicism. I am one of the 4 co-owners of Jones and Lang Sporting Goods in Columbia, Tn. My favorite hobby during spare time would be golfing. "
+      bio: "Daniel Pollard. Born and raised in Columbia, Tn. He currently resides in Spring Hill with his wife Jeanne Pollard who is a middle school teacher in Williamson county. They have five children; Daniel – 27, Katie – 25, Hannah – 24, Alex – 21 and Charlotte – 16. Katie is their special needs daughter that was born with a rare genetic disorder, diploid triploid mosaicism. He is one of the 4 co-owners of Jones and Lang Sporting Goods in Columbia, Tn. His favorite hobby during spare time is golfing."
     },
     {
       name: "Dave Cherry",
