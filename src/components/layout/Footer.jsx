@@ -36,7 +36,7 @@ const Footer = ({ navigation }) => (
       
       <div className="border-t border-blue-400 pt-8 text-center text-blue-100">
         <p>&copy; 2025 Living Years. All rights reserved.</p>
-        <p>`</p>
+        <p></p>
       </div>
     </div>
   </footer>
