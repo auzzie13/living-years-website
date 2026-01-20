@@ -16,7 +16,7 @@ const AboutSection = () => {
     },
     {
       name: "Matt Rogers",
-      title: "Vice-President",
+      title: "Chief Philanthropy Officer",
       image: "/images/Matt_Rogers-2.png",
       bio: "Matt Rogers is the public address announcer for the Tennessee Titans, a role he’s held since 2021 after being selected by fans and the organization from nearly 200 candidates. A former offensive lineman for the University of Washington, he helped lead the Huskies to an 11–1 season, a Rose Bowl championship, and a No. 3 national ranking before launching a successful career in entertainment. Matt first gained national attention as a finalist on American Idol and has since hosted major shows for Discovery Channel, Lifetime, and other networks, including Gold Rush and Deadliest Catch: The Bait.\n\n Beyond broadcasting, Matt is recognized as one of the top philanthropic fundraisers in America, driven by a deeply personal mission after having three children born with cystic fibrosis. His passion has helped raise millions of dollars for research, treatment, and nonprofit organizations nationwide. Known for his unmistakable voice, high-energy presence, and genuine heart, Matt brings the same commitment to every stage—whether it’s an NFL stadium, a national TV audience, or a charity gala changing lives.\n\nMatt has been married to his beautiful wife Teri for 22 years, and together they have four wonderful children: Brayden (19), Mason (17), Samantha (11), and Brooklyn (3). His family remains the center of his world and the driving force behind his purpose, passion, and philanthropic work."
     },
@@ -28,7 +28,7 @@ const AboutSection = () => {
     },
     {
       name: "Dave Cherry",
-      title: "Treasurer",
+      title: "Vice-President/Treasurer",
       image: "/images/Dave_Cherry-2.png",
       bio: "Dave Cherry serves as Treasurer on the Living Years board. With more than 20 years of experience in consumer and commercial banking, he currently leads commercial product, sales, and support for FirstBank as Director of Treasury Management Services. He is an active member of the Association of Financial Professionals and serves on the Digital Advisory Board for Jack Henry.\n\n Dave has a long history of community involvement, volunteering with organizations such as United Way (Allocations Committee), Junior Achievement, Youth Villages, Pencil Foundation, and the Community Child Care Center, where he served as a board director.\n\n He and his wife, Natalie, met at Middle Tennessee State University and now live in Thompson’s Station with their two teenage sons. In their free time, they enjoy sports, exploring new places, and spending time with friends."
     },

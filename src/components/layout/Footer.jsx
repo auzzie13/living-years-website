@@ -28,8 +28,7 @@ const Footer = ({ navigation }) => (
         
         <FooterColumn title="Contact">
           <p className="text-blue-100">
-            Email: info@livingyears.org<br />
-            Phone: (555) 123-4567
+            Email: mike.epley@outlook.com<br />
           </p>
         </FooterColumn>
       </div>
