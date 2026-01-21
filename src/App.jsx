@@ -1,30 +1,25 @@
 // ============================================
-// FILE: src/App.jsx 
+// FILE: src/App.jsx
 // ============================================
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
-import Hero from './components/sections/Hero';
-import MissionStatement from './components/sections/MissionStatement';
-import Communities from './components/sections/Communities';
-import Testimonial from './components/sections/Testimonial';
-import AboutSection from './components/sections/AboutSection';
-import SupportSection from './components/sections/SupportSection';
-import NewsSection from './components/sections/NewsSection';
-import FAQSection from './components/sections/FAQSection';
-import FloatingMascot from './components/common/FloatingMascot';
+import HomePage from './pages/HomePage';
+import DonatePage from './pages/DonatePage';
+import AboutPage from './pages/AboutPage';
 import { Home, Users, Heart, Mail, FileText, HelpCircle } from 'lucide-react';
 
 const App = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '#home', icon: Home },
-    { name: 'Our Communities', href: '#communities', icon: Users },
-    { name: 'About Us', href: '#about', icon: FileText },
-    { name: 'Support Us', href: '#support', icon: Heart },
-    { name: 'News', href: '#news', icon: Mail },
-    { name: 'FAQ', href: '#faq', icon: HelpCircle },
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Our Communities', href: '/#communities', icon: Users },
+    { name: 'About Us', href: '/about', icon: FileText },
+    { name: 'Support Us', href: '/#support', icon: Heart },
+    { name: 'News', href: '/#news', icon: Mail },
+    { name: 'FAQ', href: '/#faq', icon: HelpCircle },
   ];
 
   return (
@@ -35,21 +30,12 @@ const App = () => {
         setMobileMenuOpen={setMobileMenuOpen} 
       />
       
-      <FloatingMascot />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/donate" element={<DonatePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
       
-      <Hero />
-      <MissionStatement />
-      <Communities />
-      
-      <Testimonial 
-        quote="I love where I live because I have all my independence"
-        attribution="Independent But Not Alone"
-      />
-      
-      <AboutSection />
-      <SupportSection />
-      <NewsSection />
-      <FAQSection />
       <Footer navigation={navigation} />
     </div>
   );

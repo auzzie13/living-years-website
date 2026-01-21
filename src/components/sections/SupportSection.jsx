@@ -1,7 +1,8 @@
 // ============================================
-// FILE: src/components/sections/SupportSection.jsx
+// FILE: src/components/sections/SupportSection.jsx 
 // ============================================
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from '../layout/Section';
 import SectionTitle from '../common/SectionTitle';
 import Button from '../common/Button';
@@ -16,7 +17,9 @@ const SupportSection = () => (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button variant="secondary">Volunteer</Button>
-        <Button variant="outline">Donate</Button>
+        <Link to="/donate">
+          <Button variant="outline">Donate</Button>
+        </Link>
       </div>
     </div>
   </Section>

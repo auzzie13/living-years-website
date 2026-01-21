@@ -28,7 +28,7 @@ const Footer = ({ navigation }) => (
         
         <FooterColumn title="Contact">
           <p className="text-blue-100">
-            Email: mike.epley@outlook.com<br />
+            mike.epley@outlook.com<br />
           </p>
         </FooterColumn>
       </div>
