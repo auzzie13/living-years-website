@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const NavLink = ({ name, href }) => {
   // Check if it's an external link or hash link
   const isHashLink = href.startsWith('/#');
-  const isExternalOrHome = href === '/' || !href.startsWith('/');
+  // const isExternalOrHome = href === '/' || !href.startsWith('/');
 
   if (isHashLink) {
     return (
