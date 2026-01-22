@@ -44,10 +44,6 @@ Tennessee law further recognizes intellectual disability as a form of developmen
     {
       q: "How can I apply?",
       a: "Contact us directly to learn about availability and the application process for our communities. You can reach us by email at info@livingyears.org or by phone at (555) 123-4567. Our staff will guide you through the application process and answer any questions you may have."
-    },
-    {
-      q: "What amenities are available in Living Years communities?",
-      a: "Our communities offer safe, accessible apartments with modern amenities designed for independent living. Each community includes common areas for social activities, on-site support when needed, and access to community programs that foster connection and belonging."
     }
   ];
 

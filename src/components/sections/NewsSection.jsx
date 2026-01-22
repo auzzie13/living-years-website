@@ -10,7 +10,7 @@ const NewsSection = () => (
   <Section id="news" className="bg-living-white">
     <SectionTitle>News & Updates</SectionTitle>
     <div className="space-y-6">
-      {[1, 2, 3].map((i) => (
+      {[1].map((i) => (
         <NewsItem key={i} number={i} />
       ))}
     </div>

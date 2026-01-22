@@ -26,10 +26,10 @@ const ContactFormSection = () => {
     e.preventDefault();
     setStatus('sending');
 
-    // REPLACE THESE WITH YOUR EMAILJS CREDENTIALS
-    const SERVICE_ID = 'YOUR_SERVICE_ID';  // Replace with your service ID
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // Replace with your public key
+    
+  const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
     try {
       await emailjs.send(

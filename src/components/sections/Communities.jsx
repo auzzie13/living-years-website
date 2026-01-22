@@ -19,7 +19,7 @@ const Communities = () => (
             <Home size={48} className="text-living-white" />
           </div>
         </div>
-        <h3 className="text-2xl font-bold text-living-blue mb-4">Safe Housing</h3>
+        <h3 className="text-2xl font-bold text-living-blue mb-4">Safe Place</h3>
         <p className="text-gray-700">
           Affordable, accessible apartments designed for independent living with security and comfort in mind.
         </p>

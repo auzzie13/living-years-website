@@ -10,7 +10,7 @@ const Footer = ({ navigation }) => (
       <div className="grid md:grid-cols-3 gap-8 mb-8">
         <FooterColumn title="Living Years">
           <p className="text-living-white">
-            Creating communities that foster independence for adults with developmental disabilities.
+            Creating apartments that foster independence for adults with IDDs.
           </p>
         </FooterColumn>
         
@@ -26,11 +26,7 @@ const Footer = ({ navigation }) => (
           </ul>
         </FooterColumn>
         
-        <FooterColumn title="Contact">
-          <p className="text-blue-100">
-            mike.epley@outlook.com<br />
-          </p>
-        </FooterColumn>
+ 
       </div>
       
       <div className="border-t border-blue-400 pt-8 text-center text-blue-100">

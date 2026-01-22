@@ -11,7 +11,7 @@ const Hero = () => (
         Apartment Communities That Foster Independence
       </h1>
       <p className="text-xl md:text-2xl mb-8 text-blue-100">
-        For adults with developmental disabilities
+        For adults with IDDs
       </p>
       <Button href="#communities" variant="primary">
         Our Communities

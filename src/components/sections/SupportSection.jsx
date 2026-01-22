@@ -16,9 +16,8 @@ const SupportSection = () => (
         then Living Years would like to meet you. We have volunteer opportunities that fit with most schedules.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button variant="secondary">Volunteer</Button>
         <Link to="/donate">
-          <Button variant="outline">Donate</Button>
+          <Button variant="secondary">Donate</Button>
         </Link>
       </div>
     </div>
