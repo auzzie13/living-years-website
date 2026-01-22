@@ -25,7 +25,7 @@ const DonatePage = () => {
   };
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-living-blue to-[#1a4d62] text-living-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
