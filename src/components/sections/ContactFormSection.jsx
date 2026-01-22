@@ -106,7 +106,7 @@ const ContactFormSection = () => {
               Phone Number *
             </label>
             <input
-              type="tel"
+              type="text"
               id="phone"
               name="phone"
               value={formData.phone}
