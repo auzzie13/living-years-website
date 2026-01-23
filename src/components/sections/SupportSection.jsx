@@ -2,7 +2,7 @@
 // FILE: src/components/sections/SupportSection.jsx 
 // ============================================
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Section from '../layout/Section';
 import SectionTitle from '../common/SectionTitle';
 import Button from '../common/Button';
