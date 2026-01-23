@@ -60,9 +60,9 @@ const ContactFormSection = () => {
   return (
     <Section id="contact" className="bg-living-white">
       <div className="max-w-2xl mx-auto">
-        <SectionTitle>Get in Touch</SectionTitle>
+        <SectionTitle>Apply for Residency</SectionTitle>
         <p className="text-center text-gray-700 mb-8">
-          Interested in learning more about Living Years? Fill out the form below and we'll get back to you soon.
+           Complete the brief form below, and a member of the Living Years team will be in touch..
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -78,7 +78,7 @@ const ContactFormSection = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-living-blue focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg border-2 border-living-gold focus:border-living-blue focus:outline-none"
               placeholder="Your full name"
             />
           </div>
@@ -95,7 +95,7 @@ const ContactFormSection = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-living-blue focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg border-2 border-living-gold focus:border-living-blue focus:outline-none"
               placeholder="your.email@example.com"
             />
           </div>
@@ -112,7 +112,7 @@ const ContactFormSection = () => {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-living-blue focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg border-2 border-living-gold focus:border-living-blue focus:outline-none"
               placeholder="(555) 123-4567"
             />
           </div>
@@ -128,7 +128,7 @@ const ContactFormSection = () => {
               value={formData.message}
               onChange={handleChange}
               rows="4"
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-living-blue focus:outline-none resize-none"
+              className="w-full px-4 py-3 rounded-lg border-2 border-living-gold focus:border-living-blue focus:outline-none resize-none"
               placeholder="Tell us how we can help you..."
             />
           </div>

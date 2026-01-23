@@ -38,7 +38,7 @@ const DonatePage = () => {
             </div>
             
             <h3 className="text-2xl font-bold text-living-blue text-center mb-4">
-              Donate by Mail
+              Donate with cash or checks by Mail
             </h3>
             
             <p className="text-gray-700 text-center mb-6">
