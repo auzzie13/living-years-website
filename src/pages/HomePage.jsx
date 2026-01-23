@@ -3,6 +3,7 @@
 // ============================================
 import React from 'react';
 import Hero from '../components/sections/Hero';
+import StatsSection from '../components/sections/StatsSection';
 import MissionStatement from '../components/sections/MissionStatement';
 import Communities from '../components/sections/Communities';
 import Testimonial from '../components/sections/Testimonial';
@@ -15,6 +16,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
+      <StatsSection />
       <MissionStatement />
       <Communities />
       

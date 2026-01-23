@@ -8,6 +8,7 @@ import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import DonatePage from './pages/DonatePage';
 import AboutPage from './pages/AboutPage';
+import SocialSidebar from './components/common/SocialSidebar';
 import { Home, Users, Heart, Mail, FileText, HelpCircle } from 'lucide-react';
 
 const App = () => {
@@ -29,6 +30,8 @@ const App = () => {
         mobileMenuOpen={mobileMenuOpen} 
         setMobileMenuOpen={setMobileMenuOpen} 
       />
+      
+      <SocialSidebar />
       
       <Routes>
         <Route path="/" element={<HomePage />} />
