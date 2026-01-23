@@ -18,7 +18,7 @@ const App = () => {
     { name: 'Home', href: '/', icon: Home },
     { name: 'Our Communities', href: '/#communities', icon: Users },
     { name: 'About Us', href: '/about', icon: FileText },
-    { name: 'Support Us', href: '/#support', icon: Heart },
+    { name: 'Support Us', href: '/donate', icon: Heart },
     { name: 'News', href: '/#news', icon: Mail },
     { name: 'FAQ', href: '/#faq', icon: HelpCircle },
   ];

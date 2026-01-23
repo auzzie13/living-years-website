@@ -62,7 +62,7 @@ const ContactFormSection = () => {
       <div className="max-w-2xl mx-auto">
         <SectionTitle>Apply for Residency</SectionTitle>
         <p className="text-center text-gray-700 mb-8">
-           Complete the brief form below, and a member of the Living Years team will be in touch..
+           Complete the brief form below, and a member of the Living Years team will be in touch.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
