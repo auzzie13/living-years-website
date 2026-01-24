@@ -7,6 +7,13 @@ import SectionTitle from '../common/SectionTitle';
 import FAQItem from '../cards/FAQItem';
 
 const FAQSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const faqs = [
     {
       q: "Who can qualify to live in a Living Years community?",
@@ -43,7 +50,10 @@ Tennessee law further recognizes intellectual disability as a form of developmen
     },
     {
       q: "How can I apply?",
-      a: "Contact us directly to learn about availability and the application process for our communities. You can reach us by email at info@livingyears.org or by phone at (555) 123-4567. Our staff will guide you through the application process and answer any questions you may have."
+      a: "To get started, please complete the application form above. Once we receive your information, a member of the Living Years team will follow up to discuss availability, next steps, and answer any questions you may have.",
+      hasButton: true,
+      buttonText: "Go to Application Form",
+      onButtonClick: scrollToContact
     }
   ];
 
@@ -53,7 +63,14 @@ Tennessee law further recognizes intellectual disability as a form of developmen
         <SectionTitle>Frequently Asked Questions</SectionTitle>
         <div className="space-y-4">
           {faqs.map((item, i) => (
-            <FAQItem key={i} question={item.q} answer={item.a} />
+            <FAQItem 
+              key={i} 
+              question={item.q} 
+              answer={item.a}
+              hasButton={item.hasButton}
+              buttonText={item.buttonText}
+              onButtonClick={item.onButtonClick}
+            />
           ))}
         </div>
       </div>

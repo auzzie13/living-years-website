@@ -4,11 +4,11 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const FAQItem = ({ question, answer }) => {
+const FAQItem = ({ question, answer, hasButton, buttonText, onButtonClick }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-living-white rounded-lg shadow-sm border border-living-gold overflow-hidden">
+    <div className="bg-living-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-4 flex justify-between items-center text-left hover:bg-gray-50 transition-colors"
@@ -31,6 +31,14 @@ const FAQItem = ({ question, answer }) => {
           <div className="text-gray-700 leading-relaxed whitespace-pre-line">
             {answer}
           </div>
+          {hasButton && (
+            <button
+              onClick={onButtonClick}
+              className="mt-4 bg-living-blue text-living-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            >
+              {buttonText || 'Learn More'}
+            </button>
+          )}
         </div>
       </div>
     </div>

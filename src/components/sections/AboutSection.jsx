@@ -10,7 +10,7 @@ const AboutSection = () => {
   const boardMembers = [
     {
       name: "Mike Epley",
-      title: "CEO",
+      title: "Founder/CEO",
       image: "/images/Mike_Epley.png",
       bio: "Mike is passionate for this nonprofit started with his faith in Jesus Christ and believes it's a calling from the Lord. He had the vision for 15 years and wanted to put it to fruition. With not ever being married, he believes in community and feels his success has been granted by God and extended through his friendships. He wanted to create that opportunity for adults with intellectual and/or developmental disabilities to have a chance to experience apartment-style living on their own while building friendships within a community.\n\n Currently, he is the play-by-play broadcaster for Indy Nation Sports Network, spotter for the Tennessee Titans, and has been in recruitment on a state and national level for the last 12 plus years.\n\n He has a French bulldog named Stick. No kids and driven to make the world a better place."
     },
