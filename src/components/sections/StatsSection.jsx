@@ -2,7 +2,7 @@
 // FILE: src/components/sections/StatsSection.jsx
 // ============================================
 import React from "react";
-import { Home, Users, TrendingUp, Building2, Heart } from "lucide-react";
+import { Home, Users, TrendingUp, Building2 } from "lucide-react";
 
 const StatsSection = () => {
   const stats = [
@@ -31,12 +31,6 @@ const StatsSection = () => {
       description: "Tennesseans in institutional settings",
       subtext: "Plus 8,000+ experiencing homelessness nightly",
     },
-    {
-      icon: <Heart size={40} />,
-      stat: "Growing",
-      description: "need for Home & Community-Based Services",
-      subtext: "More people need services than programs can accommodate",
-    },
   ];
 
   return (
@@ -55,16 +49,11 @@ const StatsSection = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {stats.map((item, index) => (
             <div
               key={index}
-              className={`
-    bg-living-cream p-6 rounded-lg border-2 border-living-gold hover:shadow-lg transition-shadow
-    md:col-span-1
-    lg:col-span-4
-    ${index === 3 ? "lg:col-start-3" : index === 4 ? "lg:col-start-7" : ""}
-  `}
+              className="bg-living-cream p-6 rounded-lg border-2 border-living-gold hover:shadow-lg transition-shadow"
             >
               <div className="flex justify-center mb-4 text-living-blue">
                 {item.icon}
@@ -105,9 +94,8 @@ const StatsSection = () => {
               className="text-living-blue hover:underline font-semibold"
             >
               Tennessee Housing Program & Needs Assessment Report for People
-              with Disabilities & Older Adults
-            </a>{" "}
-            (June 2025)
+              with Disabilities & Older Adults (June 2025)
+            </a>
           </p>
         </div>
       </div>
