@@ -32,6 +32,18 @@ const AboutSection = () => {
       image: "/images/Dave_Cherry-2.png",
       bio: "Dave Cherry has more than 20 years of experience in consumer and commercial banking, he currently leads commercial product, sales, and support for FirstBank as Director of Treasury Management Services. He is an active member of the Association of Financial Professionals and serves on the Digital Advisory Board for Jack Henry.\n\n Dave has a long history of community involvement, volunteering with organizations such as United Way (Allocations Committee), Junior Achievement, Youth Villages, Pencil Foundation, and the Community Child Care Center, where he served as a board director.\n\n He and his wife, Natalie, met at Middle Tennessee State University and now live in Thompson's Station with their two teenage sons. In their free time, they enjoy sports, exploring new places, and spending time with friends."
     },
+    {
+      name: "Peggy Richardson",
+      title: "Board Member",
+      image: "/images/peggy.png",
+      bio: "Peggy Richardson is a retired educator from Brentwood, Tennessee with thirty-three years of experience in special education across elementary, middle, and high school levels, including transition classes and work-based learning programs. A graduate of Middle Tennessee State University, where she earned her Master's degree in Special Education, Peggy dedicated her career to making a difference in the lives of students with special needs. She's now enjoying retirement in College Grove, where she lives in the country with her husband and daughter. In her free time, she loves reading, spending time outdoors, tending to her flowers, swimming, and staying active at the gym. Peggy is also passionate about giving back to her community, having been actively involved with Special Olympics and Best Buddies."
+    },
+    {
+      name: "Tyler Smith",
+      title: "Board Member",
+      image: "/images/tyler.png",
+      bio: "Tyler Smith is a Middle Tennessee native and Managing Partner of CountryLand Roofing, bringing over 20 years of experience in roofing and construction. He is passionate about serving his community through honest work, strong relationships, and helping families protect what matters most. \n\n Tyler and his fiancée, Courtney, are raising their two sons, Barrett (5) and Bennett (4). Their family has personally experienced the unique challenges and rewards that can come with raising a child with additional needs(autism), giving Tyler a deeper appreciation for organizations that support and strengthen families through every season of life. This perspective makes Living Years community's mission especially meaningful to him.\n\n Outside of work, Tyler enjoys spending time with his family, hunting, and being involved in his local church. He is excited to be part of the board and looks forward to helping The Living Years Community continue to grow and make a lasting impact on the families it serves."
+    }
   ];
 
   const mascot = {
@@ -52,8 +64,8 @@ const AboutSection = () => {
         </p>
       </div>
       
-      {/* Board Members Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      {/* Board Members Grid - 2 rows of 3 */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
         {boardMembers.map((member, index) => (
           <BoardMemberCard key={index} {...member} />
         ))}
