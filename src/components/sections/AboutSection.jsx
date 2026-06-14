@@ -7,13 +7,14 @@ import SectionTitle from '../common/SectionTitle';
 import BoardMemberCard from '../cards/BoardMemberCard';
 
 const AboutSection = () => {
+  const director = {
+    name: "Mike Epley",
+    title: "Founder/CEO",
+    image: "/images/Mike_Epley.png",
+    bio: "Mike Epley is passionate for this nonprofit started with his faith in Jesus Christ and believes it's a calling from the Lord. He had the vision for 15 years and wanted to put it to fruition. With not ever being married, he believes in community and feels his success has been granted by God and extended through his friendships. He wanted to create that opportunity for adults with intellectual and/or developmental disabilities to have a chance to experience apartment-style living on their own while building friendships within a community.\n\n Currently, he is the play-by-play broadcaster for Indy Nation Sports Network, spotter for the Tennessee Titans, and has been in recruitment on a state and national level for the last 12 plus years.\n\n He has a French bulldog named Stick. No kids and driven to make the world a better place."
+  };
+
   const boardMembers = [
-    {
-      name: "Mike Epley",
-      title: "Founder/CEO",
-      image: "/images/Mike_Epley.png",
-      bio: "Mike Epley is passionate for this nonprofit started with his faith in Jesus Christ and believes it's a calling from the Lord. He had the vision for 15 years and wanted to put it to fruition. With not ever being married, he believes in community and feels his success has been granted by God and extended through his friendships. He wanted to create that opportunity for adults with intellectual and/or developmental disabilities to have a chance to experience apartment-style living on their own while building friendships within a community.\n\n Currently, he is the play-by-play broadcaster for Indy Nation Sports Network, spotter for the Tennessee Titans, and has been in recruitment on a state and national level for the last 12 plus years.\n\n He has a French bulldog named Stick. No kids and driven to make the world a better place."
-    },
     {
       name: "Matt Rogers",
       title: "Chief Philanthropy Officer",
@@ -43,6 +44,12 @@ const AboutSection = () => {
       title: "Board Member",
       image: "/images/tyler.png",
       bio: "Tyler Smith is a Middle Tennessee native and Managing Partner of CountryLand Roofing, bringing over 20 years of experience in roofing and construction. He is passionate about serving his community through honest work, strong relationships, and helping families protect what matters most. \n\n Tyler and his fiancée, Courtney, are raising their two sons, Barrett (5) and Bennett (4). Their family has personally experienced the unique challenges and rewards that can come with raising a child with additional needs(autism), giving Tyler a deeper appreciation for organizations that support and strengthen families through every season of life. This perspective makes Living Years community's mission especially meaningful to him.\n\n Outside of work, Tyler enjoys spending time with his family, hunting, and being involved in his local church. He is excited to be part of the board and looks forward to helping The Living Years Community continue to grow and make a lasting impact on the families it serves."
+    },
+    {
+      name: "Scott Felts",
+      title: "Board Member",
+      image: "/images/scott.png",
+      bio: "Scott is a CPA and Principal with Blankenship CPA Group. He currently provides leadership to the firms Non-Profit Center of Excellence, bringing together the knowledge and experience of team members across the firm to specifically resource and serve the non-profit community at the highest level.\n\n Scott is a native of TN and graduate of UT Knoxville. He spent 8 years on staff with the ministry of Athletes in Action in Ohio and Germany, before setting off on a new path in public accounting with a focus on tax and consulting. Scott and his wife, Adrienne, reside in Nolensville with their four children."
     }
   ];
 
@@ -55,28 +62,35 @@ const AboutSection = () => {
 
   return (
     <Section id="about" className="bg-living-white">
-      <SectionTitle>About Us</SectionTitle>
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Living Years creates communities for adults with IDDs that fulfill 
-          their need for independence while ensuring their safety. Our dedicated board members bring 
-          diverse expertise and a shared commitment to our mission.
-        </p>
-      </div>
-      
-      {/* Board Members Grid - 2 rows of 3 */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
-        {boardMembers.map((member, index) => (
-          <BoardMemberCard key={index} {...member} />
-        ))}
-      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionTitle>Leadership Team</SectionTitle>
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Our board brings together diverse expertise, lived experience, and unwavering commitment to our mission of creating inclusive communities.
+          </p>
+        </div>
+        
+        {/* Director - Centered */}
+        <div className="flex justify-center mb-20">
+          <div className="w-full md:w-1/2 lg:w-1/3">
+            <BoardMemberCard {...director} />
+          </div>
+        </div>
 
-      {/* Mascot Section */}
-      <div className="border-t-2 border-living-blue pt-12">
-        <h3 className="text-2xl font-bold text-living-blue text-center mb-8">Meet Our Mascot</h3>
-        <div className="flex justify-center">
-          <div className="w-full max-w-sm">
-            <BoardMemberCard {...mascot} />
+        {/* Board Members Grid - 2 rows of 3 */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 max-w-6xl mx-auto">
+          {boardMembers.map((member, index) => (
+            <BoardMemberCard key={index} {...member} />
+          ))}
+        </div>
+
+        {/* Mascot Section */}
+        <div className="border-t-2 border-living-blue pt-16">
+          <h3 className="text-3xl font-bold text-living-blue text-center mb-12">Meet Our Mascot</h3>
+          <div className="flex justify-center">
+            <div className="w-full max-w-sm">
+              <BoardMemberCard {...mascot} />
+            </div>
           </div>
         </div>
       </div>
